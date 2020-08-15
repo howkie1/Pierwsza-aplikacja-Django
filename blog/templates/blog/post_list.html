@@ -3,7 +3,15 @@
         <title>Testowy blog</title>
     </head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+
+      {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
+        
     </body>
 </html>
